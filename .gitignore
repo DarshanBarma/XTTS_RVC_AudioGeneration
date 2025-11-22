@@ -40,7 +40,8 @@ data/outputs/
 # Model files (large files)
 app/models/*.pth
 app/models/*.index
-
+app/app/models/*.pth
+app/app/models/*.index
 # Logs
 *.log
 

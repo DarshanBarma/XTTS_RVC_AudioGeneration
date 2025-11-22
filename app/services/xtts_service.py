@@ -31,7 +31,9 @@ class XTTSService:
         if self.model is None:
             try:
                 logger.info(f"Loading XTTS-v2 model: {self.model_name}")
-                self.model = TTS(self.model_name).to(self.device)
+                # Set environment variable to agree to TOS automatically
+                os.environ['COQUI_TOS_AGREED'] = '1'
+                self.model = TTS(self.model_name, progress_bar=False, gpu=torch.cuda.is_available()).to(self.device)
                 logger.info("XTTS-v2 model loaded successfully")
             except Exception as e:
                 logger.error(f"Failed to load XTTS model: {e}")

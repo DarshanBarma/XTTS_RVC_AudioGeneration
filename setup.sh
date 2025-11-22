@@ -78,12 +78,12 @@ echo ""
 # Create virtual environment
 ###########################################
 echo "Step 3: Creating Python virtual environment..."
-if [ -d "venv" ]; then
+if [ -d ".venv" ]; then
     echo -e "${YELLOW}Virtual environment already exists. Removing...${NC}"
-    rm -rf venv
+    rm -rf .venv
 fi
 
-python3 -m venv venv
+python3 -m venv .venv
 echo -e "${GREEN}✓ Virtual environment created${NC}"
 echo ""
 
@@ -91,7 +91,7 @@ echo ""
 # Activate virtual environment
 ###########################################
 echo "Step 4: Activating virtual environment..."
-source venv/bin/activate
+source .venv/bin/activate
 echo -e "${GREEN}✓ Virtual environment activated${NC}"
 echo ""
 

@@ -23,7 +23,7 @@ echo "=========================================="
 echo ""
 
 # Check if virtual environment exists
-if [ ! -d "venv" ]; then
+if [ ! -d ".venv" ]; then
     echo -e "${RED}Error: Virtual environment not found${NC}"
     echo "Please run ./setup.sh first"
     exit 1
@@ -31,7 +31,7 @@ fi
 
 # Activate virtual environment
 echo -e "${GREEN}Activating virtual environment...${NC}"
-source venv/bin/activate
+source .venv/bin/activate
 
 # Check if models directory exists
 if [ ! -d "app/models" ]; then

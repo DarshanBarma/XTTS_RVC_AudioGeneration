@@ -7,6 +7,7 @@ pydantic==2.5.0
 
 # TTS - Coqui TTS with XTTS-v2
 TTS==0.22.0
+transformers>=4.33.0,<4.36.0  # Compatible with TTS 0.22.0
 
 # PyTorch with CUDA support (install separately via setup.sh)
 # torch==2.5.1+cu121
